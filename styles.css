@@ -3,6 +3,8 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* WEBKIT PARAMETERS */
+
 @keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
@@ -32,40 +34,105 @@
     to   { opacity: 1; }
 }
 
+/*/*/
+
+/* BODY STYLES */
 
 body.mainPage {
     box-sizing: border-box;
-    background-image: url("https://user-images.githubusercontent.com/53489910/65709761-1e951300-e081-11e9-85ac-6e8ea2082e8b.jpg");
     margin: 0;
+    height: 100%;
+    width: 100%;
 }
 
 body.bioPage {
     margin: 0;
     box-sizing: border-box;
-    background-image: url("https://i.imgur.com/Gb6xVGP.jpg");
+    height: 100%;
+    width: 100%;
+
 }
 
 body.projectPage {
     margin: 0;
     box-sizing: border-box;
-    background-image: url("https://i.imgur.com/sduLRvf.jpg")
+    height: 100%;
+    width: 100%;
 }
 
-body, html {
+body, main, html {
    height: 100%;
    width: 100%;
-   background-repeat: no-repeat;
-   background-size:cover
 }
+/*/*
+
+/* DIVS */
+
 div.main {
     text-align: center;
     position:fixed;
     left:0; 
-    top:120px; 
     height: 100%;
     width: 100%;
-    
+    background-image: url("https://user-images.githubusercontent.com/53489910/65709761-1e951300-e081-11e9-85ac-6e8ea2082e8b.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+div.buttonHolder3 {
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+}
+
+div.bioWrapper {
+    height: 100% !important;
+    width: 100%;
+    background-image: url("https://i.imgur.com/Gb6xVGP.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid black;
+}
+
+
+div.projectWrapper {
+    height: 100%;
+    width: 100%;
+    background-image: url("https://i.imgur.com/sduLRvf.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+div.bioHolder {
+    border: 1px white solid;
+    height: 600px;
+    width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(228, 228, 228);
+    text-align: center;
+}
+
+div.projectHolder {
+    border: 1px white solid;
+    height: 600px;
+    width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(228, 228, 228);
+    text-align: center;
+}
+/*/*/
 
 h1.name {
     color: white;
@@ -146,11 +213,7 @@ p.intro {
          -o-animation: fadein 4s; 
             animation: fadein 4s;
 }
-.buttonHolder3 {
-    position: fixed;
-    bottom: 0px;
-    left: 50%;
-}
+
 
 .scrollButton {
     height: 50px;
@@ -165,17 +228,6 @@ p.intro {
             animation: fadein 4s;
 }
 
-.bioHolder {
-    border: 1px white solid;
-    height: 600px;
-    width: 350px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgb(228, 228, 228);
-    text-align: center;
-}
 
 p.bio {
     color: black;
@@ -183,6 +235,8 @@ p.bio {
     margin-left: 8px;
     margin-right: 8px;
 }
+
+/* IMAGE PROPERTIES */
 
 img.githubIcon {
     width:30px;
@@ -213,6 +267,7 @@ img.quizScreenshot {
     width: 325px;
     height: auto;
 }
+/*/*/
 
 p.projectDescription {
     margin-left: 5px;
