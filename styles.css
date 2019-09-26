@@ -74,6 +74,8 @@ body.projectPage {
 body, main, html {
    height: 100%;
    width: 100%;
+   -webkit-font-smoothing: antialiased;
+   text-rendering: optimizeLegibility;
 }
 /*/*/
 
@@ -104,7 +106,7 @@ div.buttonHolder3 {
 div.bioWrapper {
     height: 800px;
     width: 100%;
-    background-image: url("https://i.imgur.com/Gb6xVGP.jpg");
+    background-image: url("https://stmed.net/sites/default/files/leather-textures-wallpapers-25244-3443181.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -117,7 +119,7 @@ div.bioWrapper {
 div.projectWrapper {
     height: 800px;
     width: 100%;
-    background-image: url("https://i.imgur.com/sduLRvf.jpg");
+    background-image: url("https://stmed.net/sites/default/files/leather-textures-wallpapers-25244-3443181.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -126,22 +128,21 @@ div.projectWrapper {
 }
 
 div.bioHolder {
-    border: 1px white solid;
+    border: none;
     height: 600px;
     width: 350px;
     display: inline-block;
     margin-top: 75px;
-    background-color: white;
+    background-color: transparent;
     text-align: center;
 }
 
 div.projectHolder {
-    border: 1px white solid;
     height: 600px;
     width: 350px;
     display: inline-block;
     margin-top: 45px;
-    background-color: rgb(228, 228, 228);
+    background-color: rgb(61, 61, 61);
     text-align: center;
 }
 /*/*/
@@ -165,6 +166,7 @@ h1.projects {
 
 h1.bioHeading {
     font-family: 'Open Sans', sans-serif;
+    color: white;
 }
 
 h2.header {
@@ -240,13 +242,35 @@ p.intro {
             animation: fadein 6s;
 }
 
+h1.bioHeading {
+    font-family: 'Montserrat', sans-serif;
+}
 
 p.bio {
-    color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
     size: 14px;
     margin-left: 8px;
     margin-right: 8px;
     text-align: left;
+    line-height: 20px;
+}
+
+h1.projectHeading {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+h2.projectHeading2 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+p.projectDescription {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: white;
 }
 
 /* IMAGE PROPERTIES */
@@ -282,11 +306,6 @@ img.quizScreenshot {
 }
 /*/*/
 
-p.projectDescription {
-    margin-left: 5px;
-    margin-right: 5px;
-}
-
 /* MEDIA QUERIES */
 
     /* MOBILE */
@@ -295,6 +314,11 @@ p.projectDescription {
 
     /* DESKTOP */
     @media only screen and (min-width: 960px) {
+
+        h1.name {
+            font-size: 85px;
+            font-weight: bolder;
+        }
         p.intro {
             font-family: 'Source Sans Pro', sans-serif;
             color: white;
@@ -310,18 +334,25 @@ p.projectDescription {
                 blink-caret .75s step-end infinite;
         }
     
+        p.bio {
+            line-height: 30px;
+        }
+
         /* DIVS */
         div.bioHolder {
-            float: right;
-            width: 60%;
-            height: 500px;
+            float: left;
+            width: 40%;
+            height: 400px;
+            margin-top: 175px;
         }
 
         div.projectHolder {
-            float:left;
+            float:right;
             width: 70%;
-            height: 500px;
+            height: 525px;
             margin-top: 150px;
+            /* background-color: rgb(61, 61, 61); */
+            background-color: transparent;
         }
         
     }
