@@ -7,6 +7,14 @@ $(document).ready(function() {
     });
   });
 
+$(document).ready(function() {
+  $("a.scroll-downBio").on("click", function(e) {
+    e.preventDefault();
+    $("body, html").animate({ 
+      scrollTop: $( $(this).attr('href') ).offset().top 
+    }, 600);
+  });
+});
 
 /* $("a.scroll-down").click(function() {
     $("div.mainWrapper").animate({

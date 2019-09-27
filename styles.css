@@ -181,10 +181,13 @@ div.projectWrapper {
 div.bioHolder {
     border: none;
     height: 600px;
-    width: 350px;
+    width: 340px;
     display: inline-block;
     margin-top: 75px;
-    background-color: transparent;
+    background-color: rgb(29, 29, 29);
+    -moz-box-shadow: 0 0 15px #ccc;
+    -webkit-box-shadow: 0 0 15px #ccc;
+    box-shadow: 0 0 15px;
     text-align: center;
 }
 
@@ -208,7 +211,10 @@ div.projectHolder {
     width: 350px;
     display: inline-block;
     margin-top: 100px;
-    background-color: rgb(61, 61, 61);
+    background-color: rgb(29, 29, 29);
+    -moz-box-shadow: 0 0 15px #ccc;
+    -webkit-box-shadow: 0 0 15px #ccc;
+    box-shadow: 0 0 15px;
     text-align: center;
 }
 /*/*/
@@ -229,22 +235,42 @@ h1.name {
 .fa-github {
     color: black;
     margin-top: 7px;
+    -webkit-animation: fadein 6s; 
+    -moz-animation: fadein 6s; 
+        -ms-animation: fadein 6s; 
+        -o-animation: fadein 6s; 
+            animation: fadein 6s;
 }
 
 .fa-envelope-open-text {
     color: black;
     margin-bottom: 7px;
+    -webkit-animation: fadein 6s; 
+    -moz-animation: fadein 6s; 
+        -ms-animation: fadein 6s; 
+        -o-animation: fadein 6s; 
+            animation: fadein 6s;
 }
 
 .fa-id-card {
     color: black;
     margin-top: 4px;
     margin-right: 1px;
+    -webkit-animation: fadein 6s; 
+    -moz-animation: fadein 6s; 
+        -ms-animation: fadein 6s; 
+        -o-animation: fadein 6s; 
+            animation: fadein 6s;
 }
 
 .fa-ellipsis-h {
     color: black;
     margin-top: 4px;
+    -webkit-animation: fadein 6s; 
+    -moz-animation: fadein 6s; 
+        -ms-animation: fadein 6s; 
+        -o-animation: fadein 6s; 
+            animation: fadein 6s;
 }
 
 h1.projects {
@@ -304,7 +330,7 @@ p.intro {
     transform: translateY(-8px);
 }
 
-.scroll-down {
+.scroll-down, .scroll-downBio {
     opacity: 1;
     -webkit-transition: all .5s ease-in 3s;
     transition: all .5s ease-in 3s;
@@ -329,7 +355,25 @@ p.intro {
     transform: scale(1)
   }
 
-.scroll-down:before {
+  /* .scroll-downBio {
+    position: relative;
+    margin-top: 800px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #FFF;
+    background-size: 14px auto;
+    border-radius: 50%;
+    z-index: 2;
+    -webkit-animation: bounce 2s infinite 2s;
+    animation: bounce 2s infinite 2s;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    transform: scale(1);
+    float: bottom;
+  } */
+
+.scroll-down:before, .scroll-downBio:before {
     position: absolute;
     top: calc(50% - 8px);
     left: calc(50% - 6.75px);
@@ -417,6 +461,7 @@ ul.skillsList {
 
 ul li{
     padding: 10px;
+    font-size: 35px; 
 }
 
 h1.projectHeading {
@@ -513,8 +558,8 @@ img.quizScreenshot {
         div.bioHolder {
             float: left;
             width: 40%;
-            height: 400px;
-            margin-top: 115px;
+            height: 550px;
+            margin-top: 65px;
         }
 
         div.skillsHolder {
@@ -528,8 +573,6 @@ img.quizScreenshot {
             width: 70%;
             height: 525px;
             margin-top: 150px;
-            /* background-color: rgb(61, 61, 61); */
-            background-color: transparent;
         }
         
     }
