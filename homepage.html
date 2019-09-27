@@ -5,6 +5,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
         <meta name="viewport" content="width=device-width"/>
+        <script src="https://kit.fontawesome.com/d0142f03e9.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="index.js"></script>
     </head>
@@ -18,29 +19,25 @@
                     </section>
                     <section role="buttons">
                         <div role="buttonHolder">
-                            <div role="buttonHolder1">
-                                <button name="gitHub" type="button" id="github" class="homepageButton"></button>
-                                <button name="email" type="button" id="email" class="homepageButton"></button>
-                            </div>
-                            <div role="buttonHolder2"></div>
-                                <button name="contactInfo" type="button" id="contactInfo" class="homepageButton"></button>
+                                <button name="gitHub" type="button" id="github" class="homepageButton"><i class="fab fa-github"></i></i></button>
+                                <button name="email" type="button" id="email" class="homepageButton"><i class="fas fa-envelope-open-text"></i></button>
+                                <button name="contactInfo" type="button" id="contactInfo" class="homepageButton"><i class="fas fa-id-card"></i></button>
                                 <button name="email" type="button" id="misc" class="homepageButton"></button>
-                            </div>
                             <div role="buttonHolder3" class="buttonHolder3">
-                                <button name="scrollDown" type="button" class="scrollButton"></button> 
+                                    <a href="#bio" class="scroll-down" id="scroll" address="true"></a>
                             </div>
                         </div>
                     </section>
                 </div>
             </div>
-            <div role="wrapper" class="bioWrapper">    
+            <div role="wrapper" class="bioWrapper" id="bio">    
                     <div role="bioDisplay" class="bioHolder">
                         <h1 class="bioHeading">
                             <u>BIO</u>
                         </h1>
                         <br>
                         <p class="bio">
-                            I am an ex-premed student who has since decided to change career choices and follow their passion of computers and software
+                            I am an ex-premed student who has since decided to change career choices and follow my passion for computers and software
                             development. I've always been enthralled by the interworkings of computers, having built a computer of my own
                             and developed a strong intrigue for how computers function. I enjoy coding because it gives me an ever-lasting 
                             creative outlet and motivates me to continually develop problem solving skills, which I have found to be extremely 
@@ -52,6 +49,17 @@
                             somewhat of an overthinker, so I have developed a habit of meditation and zoning out to music.  
                         </p>
                     </div>
+            </div>
+            <div role="wrapper" class="skillsWrapper">
+                <div role="skillsDisplay" class="skillsHolder">
+                    <h1 class="skillsHeading">Skills</h1>
+                    <ul class="skillsList">
+                        <li>CSS</li>
+                        <li>HTML5</li>
+                        <li>JavaScript</li>
+                        <li>JQuery</li>
+                    </ul>
+                </div>
             </div>
             <div role="wrapper" class="projectWrapper">    
                     <div role="bioDisplay" class="projectHolder">
