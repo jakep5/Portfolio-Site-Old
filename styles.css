@@ -242,6 +242,11 @@ h1.name {
     margin-right: 1px;
 }
 
+.fa-ellipsis-h {
+    color: black;
+    margin-top: 4px;
+}
+
 h1.projects {
     font-family: 'Open Sans', sans-serif;
 }
