@@ -570,9 +570,21 @@ img.quizScreenshot {
 
         div.projectHolder {
             float:left;
+            position: relative;
             width: 70%;
             height: 525px;
             margin-top: 150px;
+        }
+
+        div.changeProjectButton {
+            display: block;
+            float: left;
+            height: 50px;
+            width: 50px;
+            border: 1px solid white;
+            position: absolute;
+            top: 50%;
+            left: calc(100% - 52px);
         }
         
     }
