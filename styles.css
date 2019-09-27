@@ -1,39 +1,254 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* WEBKIT PARAMETERS */
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+  
+  
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: grey; }
+}
+
+/* Bounce animation */
+@keyframes bounce {
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+      -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+    }
+    40% {
+      -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+      transform: translateY(-10px);
+    }
+    60% {
+      -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+      transform: translateY(-5px);
+    }
+  }
+
+/* Background animation */
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: -10000px 0; }
+}
+/*/*/
+
+/* BODY STYLES */
+
 body.mainPage {
     box-sizing: border-box;
-    background-image: url("https://user-images.githubusercontent.com/53489910/65612633-1f0bac00-dfa4-11e9-8f7a-e7f58ca9e19a.jpg");
     margin: 0;
+    height: 100%;
+    width: 100%;
 }
 
 body.bioPage {
     margin: 0;
     box-sizing: border-box;
-    background-image: url("https://i.imgur.com/Gb6xVGP.jpg");
+    height: 100%;
+    width: 100%;
+
 }
 
 body.projectPage {
     margin: 0;
     box-sizing: border-box;
-    background-image: url("https://i.imgur.com/sduLRvf.jpg")
-}
-
-body, html {
-   height: 100%;
-   width: 100%;
-   background-repeat: no-repeat;
-   background-size:cover
-}
-div.main {
-    text-align: center;
-    position:fixed;
-    left:0; 
-    top:120px; 
     height: 100%;
     width: 100%;
 }
 
+body, main, html {
+   height: 100%;
+   width: 100%;
+   -webkit-font-smoothing: antialiased;
+   text-rendering: optimizeLegibility;
+}
+/*/*/
+
+/* DIVS */
+div.main {
+    text-align: center;
+    display: inline-block;
+    margin-top: 120px;
+}
+div.buttonHolder {
+    display: inline-block;
+    position: relative;
+    top: 40px;
+    width: 650px;
+    margin-top: 25px;
+}
+
+div.mainWrapper {
+    height: 750px;
+    text-align: center;
+    width: 100%;
+    background-image: url("https://user-images.githubusercontent.com/53489910/65709761-1e951300-e081-11e9-85ac-6e8ea2082e8b.jpg");
+    background-size: cover;
+    /* background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center; */
+}
+
+div.gradient {
+    background-image: url("https://user-images.githubusercontent.com/53489910/65785275-87dd5a80-e143-11e9-97c6-f42d6a69830a.png");
+    background-size: cover;
+    width: 100%;
+    height: 100px;
+}
+div.buttonHolder3 {
+    position: absolute;
+    bottom: 0px;
+    margin-top: 20px;
+    left: 50%;
+}
+
+div.bioWrapper {
+    height: 800px;
+    width: 100%;
+    background-image: url("https://stmed.net/sites/default/files/leather-textures-wallpapers-25244-3443181.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+div.skillsWrapper {
+    height: 500px;
+    width: 100%;
+    background-image: url("https://stmed.net/sites/default/files/leather-textures-wallpapers-25244-3443181.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+div.projectWrapper {
+    height: 800px;
+    width: 100%;
+    background-image: url("https://stmed.net/sites/default/files/leather-textures-wallpapers-25244-3443181.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+div.bioHolder {
+    border: none;
+    height: 600px;
+    width: 350px;
+    display: inline-block;
+    margin-top: 75px;
+    background-color: transparent;
+    text-align: center;
+}
+
+div.skillsHolder {
+    height:600px;
+    width: 350px;
+    background-color: rgb(29, 29, 29);
+    -moz-box-shadow: 0 0 15px #ccc;
+    -webkit-box-shadow: 0 0 15px #ccc;
+    box-shadow: 0 0 15px;
+    margin-top: 100px;
+    margin-bottom:50px;
+    text-align: center;
+    position: relative;
+    bottom: 150px;
+    display: inline-block;
+}
+
+div.projectHolder {
+    height: 700px;
+    width: 350px;
+    display: inline-block;
+    margin-top: 100px;
+    background-color: rgb(61, 61, 61);
+    text-align: center;
+}
+/*/*/
+
 h1.name {
     color: white;
-    font-size: 35px;
+    font-size: 50px;
+    font-weight: 1000;
+    font-family: 'Source Sans Pro', sans-serif;
+    -webkit-animation: fadein 6s; 
+    -moz-animation: fadein 6s; 
+        -ms-animation: fadein 6s; 
+        -o-animation: fadein 6s; 
+            animation: fadein 6s;
+    margin-block-end: 20px;
+}
+
+.fa-github {
+    color: black;
+    margin-top: 7px;
+}
+
+.fa-envelope-open-text {
+    color: black;
+    margin-bottom: 7px;
+}
+
+.fa-id-card {
+    color: black;
+    margin-top: 4px;
+    margin-right: 1px;
+}
+
+h1.projects {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1.bioHeading {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
 }
 
 h2.header {
@@ -42,49 +257,181 @@ h2.header {
 }
 
 p.intro {
-    color:white;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
     margin-left: 30px;
     margin-right: 30px;
+    margin-top: 50px;
+    -webkit-animation: fadein 6s; 
+    -moz-animation: fadein 6s; 
+        -ms-animation: fadein 6s; 
+        -o-animation: fadein 6s; 
+            animation: fadein 6s;
 }
+
+
+
 
 .homepageButton {
     width: 65px;
     height: 65px;
+    font-size: 45px;
     border-radius: 50%;
     margin-top: 30px;
     margin-left: 20px;
     margin-right: 20px;
+    color: transparent;
+    border: white 2px solid;
+    cursor: pointer;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
 }
 
-.buttonHolder3 {
-    position: fixed;
-    bottom: 0px;
-    left: 50%;
+.homepageButton:hover, .homepageButton:focus, .homepageButton:active {
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
 }
+
+.scroll-down {
+    opacity: 1;
+    -webkit-transition: all .5s ease-in 3s;
+    transition: all .5s ease-in 3s;
+  }
+
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -16px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #FFF;
+    background-size: 14px auto;
+    border-radius: 50%;
+    z-index: 2;
+    -webkit-animation: bounce 2s infinite 2s;
+    animation: bounce 2s infinite 2s;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    transform: scale(1)
+  }
+
+.scroll-down:before {
+    position: absolute;
+    top: calc(50% - 8px);
+    left: calc(50% - 6.75px);
+    transform: rotate(-45deg);
+    display: block;
+    width: 12px;
+    height: 12px;
+    content: "";
+    border: 2px solid white;
+    border-width: 0px 0 2px 2px;
+}
+  
+
+#github {
+    -webkit-animation: fadein 6s; 
+    -moz-animation: fadein 6s; 
+        -ms-animation: fadein 6s; 
+        -o-animation: fadein 6s; 
+            animation: fadein 6s;
+}
+
+#email {
+    -webkit-animation: fadein 6s; 
+    -moz-animation: fadein 6s;
+        -ms-animation: fadein 6s; 
+        -o-animation: fadein 6s; 
+            animation: fadein 6s;
+}
+
+#contactInfo{
+    -webkit-animation: fadein 6s; 
+    -moz-animation: fadein 6s; 
+        -ms-animation: fadein 6s; 
+        -o-animation: fadein 6s; 
+            animation: fadein 6s;
+}
+
+#misc {
+    -webkit-animation: fadein 6s; 
+    -moz-animation: fadein 6s; 
+        -ms-animation: fadein 6s; 
+        -o-animation: fadein 6s; 
+            animation: fadein 6s;
+}
+
 
 .scrollButton {
-    height: 30px;
-    width: 30px;
+    height: 50px;
+    width: 50px;
+    right: 25px;
+    display: inline-block;
+    position: relative;
+    -webkit-animation: fadein 6s; 
+    -moz-animation: fadein 6s; 
+        -ms-animation: fadein 6s; 
+        -o-animation: fadein 6s; 
+            animation: fadein 6s;
 }
 
-.bioHolder {
-    border: 1px white solid;
-    height: 600px;
-    width: 350px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgb(228, 228, 228);
-    text-align: center;
+h1.bioHeading {
+    font-family: 'Montserrat', sans-serif;
 }
 
 p.bio {
-    color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
     size: 14px;
     margin-left: 8px;
     margin-right: 8px;
+    text-align: left;
+    line-height: 20px;
 }
+
+h1.skillsHeading {
+    font-family:'Montserrat', sans-serif;
+    color: white;
+    size: 45px;
+}
+
+ul.skillsList {
+    font-family: 'Source Sans Pro', sans-serif;
+    color:white;
+    size:35px;
+}
+
+ul li{
+    padding: 10px;
+}
+
+h1.projectHeading {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+h2.projectHeading2 {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+p.projectDescription {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-left: 5px;
+    margin-right: 5px;
+    color: white;
+}
+
+/* IMAGE PROPERTIES */
 
 img.githubIcon {
     width:30px;
@@ -115,8 +462,69 @@ img.quizScreenshot {
     width: 325px;
     height: auto;
 }
+/*/*/
 
-p.projectDescription {
-    margin-left: 5px;
-    margin-right: 5px;
-}
+/* MEDIA QUERIES */
+
+    /* MOBILE */
+
+    /* TABLETS */
+
+    /* DESKTOP */
+    @media only screen and (min-width: 960px) {
+
+        h1.name {
+            font-size: 85px;
+            font-weight: bolder;
+        }
+        p.intro {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: white;
+            margin-left: 30px;
+            margin-right: 30px;
+            overflow: hidden; 
+            border-right: .15em solid grey; 
+            white-space: nowrap; 
+            margin: 0 auto; 
+            letter-spacing: .15em; 
+            animation: 
+                typing 4.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+    
+        p.bio {
+            line-height: 30px;
+        }
+
+        /* DIVS */
+
+    div.mainWrapper {
+        background-repeat: repeat-x;
+        background-position: 0 0;
+        background-size: auto 100%;
+        animation: animatedBackground 1000s linear infinite;
+    }
+
+        div.bioHolder {
+            float: left;
+            width: 40%;
+            height: 400px;
+            margin-top: 115px;
+        }
+
+        div.skillsHolder {
+            float:right;
+            width: 40%;
+            height: 400px;
+        }
+
+        div.projectHolder {
+            float:left;
+            width: 70%;
+            height: 525px;
+            margin-top: 150px;
+            /* background-color: rgb(61, 61, 61); */
+            background-color: transparent;
+        }
+        
+    }
