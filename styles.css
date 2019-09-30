@@ -233,8 +233,8 @@ div.projectHolder {
 }
 
 div.contactInfoHolder {
-    height:350px;
-    width:600px;
+    height:500px;
+    width:350px;
     display: inline-block;
     margin-top: 125px;
     background-color: rgb(29, 29, 29);
@@ -422,7 +422,7 @@ p.contact {
 
 .scroll-downTop {
     position: relative;
-    top: 15%
+    top: 10%
 }
 
 .scroll-down:before, .scroll-downBio:before, .scroll-downSkills:before, .scroll-downProjects:before, .scroll-downTop:before{
@@ -586,12 +586,32 @@ img.quizScreenshot {
         .scroll-downTop:before {
             display: none;
         }
+
+        div.projectWrapper {
+            height: 900px;
+        }
+
+        div.projectHolder {
+            height: 750px;
+        }
+
+        div.skillsWrapper {
+            height: 600px;
+        }
+
+        div.skillsHolder {
+            height: 350px;
+        }
+
+        div.contactInfo {
+            height: 400px;
+        }
     }
     /* TABLETS */
 
     @media only screen and (max-width:960px) and (min-width:480px) {
         h1.name {
-            font-size: 85px;
+            font-size: 60px;
             font-weight: bolder;
         }
         p.intro {
@@ -599,14 +619,12 @@ img.quizScreenshot {
             color: white;
             margin-left: 30px;
             margin-right: 30px;
-            overflow: hidden; 
+            /* overflow: hidden; 
             border-right: .15em solid grey; 
             white-space: nowrap; 
-            margin: 0 auto; 
+            margin: 0 auto;  */
             letter-spacing: .15em; 
-            animation: 
-                typing 4.5s steps(40, end),
-                blink-caret .75s step-end infinite;
+
         }
     
         p.bio {
@@ -616,16 +634,44 @@ img.quizScreenshot {
 
         /* DIVS */
 
-    div.mainWrapper {
-        background-repeat: repeat-x;
-        background-position: 0 0;
-        background-size: auto 100%;
-        animation: animatedBackground 1000s linear infinite;
-    }
+        div.mainWrapper {
+            background-repeat: repeat-x;
+            background-position: 0 0;
+            background-size: auto 100%;
+            animation: animatedBackground 1000s linear infinite;
+            width: 100%;
+        }
+
+        div.main {
+            display: inline-block;
+            left: 50%;
+            
+        }
+
+       /*  div.bioWrapper {
+            width: 150%;
+        }
+
+        div.projectWrapper {
+            width: 150%;
+        }
+
+        div.skillsWrapper {
+            width: 150%;
+        } */
+
+        div.contactInfoWrapper {
+            /* width: 150%; */
+            height: 775px;
+        }
+
+        div.projectWrapper {
+            height: 750px;
+        }
 
         div.bioHolder {
             float: left;
-            width: 40%;
+            width: 50%;
             height: 600px;
             margin-top: 65px;
         }
@@ -640,8 +686,9 @@ img.quizScreenshot {
             float:left;
             position: relative;
             width: 70%;
-            height: 575px;
+            height: 625px;
             margin-top: 50px;
+            flex: 1 0 auto;
         }
 
         div.changeProjectButton {
@@ -653,7 +700,18 @@ img.quizScreenshot {
             top: 40%;
             left: 88%
         }
+
+        div.contactInfoHolder {
+            height: 400px;
+        }
         
+        .scroll-downBio {
+            left: 75%;
+        }
+
+        .scroll-downSkills {
+            left: 30%;
+        }
     }
 
     /* DESKTOP */
@@ -710,7 +768,13 @@ img.quizScreenshot {
             position: relative;
             width: 70%;
             height: 575px;
-            margin-top: 50px;
+            margin-top: 20px;
+        }
+
+        div.contactInfoHolder {
+            display: inline-block;
+            width: 40%;
+            height: 55%;
         }
 
         div.changeProjectButton {
@@ -724,3 +788,14 @@ img.quizScreenshot {
         }
         
     }
+
+    @media only screen and (min-width: 480px) and (max-width: 640px) {
+        div.bioHolder {
+            height: 750px;
+        }
+
+        .scroll-downBio {
+            top: 105%;
+        }
+    }
+        
