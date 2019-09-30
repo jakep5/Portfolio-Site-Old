@@ -606,6 +606,10 @@ img.quizScreenshot {
         div.contactInfo {
             height: 400px;
         }
+
+        button.homepageButton {
+            -webkit-appearance: none;
+        }
     }
     /* TABLETS */
 
