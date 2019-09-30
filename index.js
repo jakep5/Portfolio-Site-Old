@@ -55,13 +55,19 @@ $(document).ready(function() {
 
 $(document).ready(function() {
   $("#github").click(function() {
-    window.open("https://github.com/jakep5/")
+    window.open("https://github.com/jakep5/", "_blank");
   })
 });
 
 $(document).ready(function() {
   $("#email").click(function() {
     window.location.href = "mailto:jakepagel1@yahoo.com";
+  })
+});
+
+$(document).ready(function() {
+  $("#linkedIn").click(function() {
+    window.open("https://www.linkedin.com/in/jake-pagel-38b243191/", "_blank");
   })
 });
 

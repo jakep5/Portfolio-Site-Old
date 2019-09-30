@@ -296,7 +296,7 @@ h1.name {
             animation: fadein 6s;
 }
 
-.fa-ellipsis-h {
+.fa-linkedin {
     color: black;
     margin-top: 4px;
     -webkit-animation: fadein 6s; 
@@ -475,6 +475,14 @@ p.contact {
 }
 
 #misc {
+    -webkit-animation: fadein 6s; 
+    -moz-animation: fadein 6s; 
+        -ms-animation: fadein 6s; 
+        -o-animation: fadein 6s; 
+            animation: fadein 6s;
+}
+
+#linkedIn {
     -webkit-animation: fadein 6s; 
     -moz-animation: fadein 6s; 
         -ms-animation: fadein 6s; 
