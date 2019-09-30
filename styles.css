@@ -147,9 +147,9 @@ div.buttonHolder3 {
 }
 
 div.bioWrapper {
-    height: 800px;
+    height: 700px;
     width: 100%;
-    background-image: url("https://stmed.net/sites/default/files/leather-textures-wallpapers-25244-3443181.jpg");
+    background-image: url("https://user-images.githubusercontent.com/53489910/65891563-42639c00-e394-11e9-9579-f5a71095c3eb.png");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -158,24 +158,38 @@ div.bioWrapper {
 }
 
 div.skillsWrapper {
-    height: 500px;
+    height: 700px;
     width: 100%;
-    background-image: url("https://stmed.net/sites/default/files/leather-textures-wallpapers-25244-3443181.jpg");
+    background-image: url("https://user-images.githubusercontent.com/53489910/65891594-527b7b80-e394-11e9-8b75-f8e8dfa50e29.png");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
 }
+
+
 div.projectWrapper {
-    height: 800px;
+    height: 700px;
     width: 100%;
-    background-image: url("https://stmed.net/sites/default/files/leather-textures-wallpapers-25244-3443181.jpg");
+    background-image: url("https://user-images.githubusercontent.com/53489910/65891657-7212a400-e394-11e9-9cae-0ce3b53e9d82.png");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+}
+
+div.contactInfoWrapper {
+    width: 100%;
+    height: 700px;
+    background-image: url("https://user-images.githubusercontent.com/53489910/65891994-0c72e780-e395-11e9-90c7-76d32aedd797.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+
 }
 
 div.bioHolder {
@@ -198,7 +212,7 @@ div.skillsHolder {
     -moz-box-shadow: 0 0 15px #ccc;
     -webkit-box-shadow: 0 0 15px #ccc;
     box-shadow: 0 0 15px;
-    margin-top: 100px;
+    margin-top: 300px;
     margin-bottom:50px;
     text-align: center;
     position: relative;
@@ -211,6 +225,18 @@ div.projectHolder {
     width: 350px;
     display: inline-block;
     margin-top: 100px;
+    background-color: rgb(29, 29, 29);
+    -moz-box-shadow: 0 0 15px #ccc;
+    -webkit-box-shadow: 0 0 15px #ccc;
+    box-shadow: 0 0 15px;
+    text-align: center;
+}
+
+div.contactInfoHolder {
+    height:350px;
+    width:600px;
+    display: inline-block;
+    margin-top: 125px;
     background-color: rgb(29, 29, 29);
     -moz-box-shadow: 0 0 15px #ccc;
     -webkit-box-shadow: 0 0 15px #ccc;
@@ -255,7 +281,8 @@ h1.name {
 .fa-id-card {
     color: black;
     margin-top: 4px;
-    margin-right: 1px;
+    position: relative;
+    right: 2px;
     -webkit-animation: fadein 6s; 
     -moz-animation: fadein 6s; 
         -ms-animation: fadein 6s; 
@@ -273,6 +300,10 @@ h1.name {
             animation: fadein 6s;
 }
 
+.fa-arrow-right {
+    color: black;
+}
+
 h1.projects {
     font-family: 'Open Sans', sans-serif;
 }
@@ -282,9 +313,18 @@ h1.bioHeading {
     color: white;
 }
 
+h1.contactHeader {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
 h2.header {
     color: white;
     font-size: 15px;
+}
+
+a:hover {
+    cursor: pointer;
 }
 
 p.intro {
@@ -300,6 +340,10 @@ p.intro {
             animation: fadein 6s;
 }
 
+p.contact {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+}
 
 
 
@@ -336,7 +380,7 @@ p.intro {
     transition: all .5s ease-in 3s;
   }
 
-.scroll-down {
+.scroll-down, .scroll-downBio, .scroll-downSkills, .scroll-downProjects, .scroll-downTop{
     position: absolute;
     bottom: 30px;
     left: 50%;
@@ -355,25 +399,33 @@ p.intro {
     transform: scale(1)
   }
 
-  /* .scroll-downBio {
+.scroll-down {
     position: relative;
-    margin-top: 800px;
-    display: block;
-    width: 32px;
-    height: 32px;
-    border: 2px solid #FFF;
-    background-size: 14px auto;
-    border-radius: 50%;
-    z-index: 2;
-    -webkit-animation: bounce 2s infinite 2s;
-    animation: bounce 2s infinite 2s;
-    -webkit-transition: all .2s ease-in;
-    transition: all .2s ease-in;
-    transform: scale(1);
-    float: bottom;
-  } */
+    top: 27%;
+}
 
-.scroll-down:before, .scroll-downBio:before {
+.scroll-downBio {
+    position: relative;
+    top: 90%;
+}
+
+.scroll-downSkills {
+    position: relative;
+    top: 85%;
+}
+
+.scroll-downProjects {
+    position: relative;
+    top: 85%;
+    left: 85%;
+}
+
+.scroll-downTop {
+    position: relative;
+    top: 15%
+}
+
+.scroll-down:before, .scroll-downBio:before, .scroll-downSkills:before, .scroll-downProjects:before, .scroll-downTop:before{
     position: absolute;
     top: calc(50% - 8px);
     left: calc(50% - 6.75px);
@@ -384,6 +436,11 @@ p.intro {
     content: "";
     border: 2px solid white;
     border-width: 0px 0 2px 2px;
+}
+
+.scroll-downTop:before {
+    transform: rotate(135deg);
+    top: calc(50% - 5px);
 }
   
 
@@ -457,11 +514,13 @@ ul.skillsList {
     font-family: 'Source Sans Pro', sans-serif;
     color:white;
     size:35px;
+    padding-left: 0px;
 }
 
 ul li{
     padding: 10px;
     font-size: 35px; 
+    list-style: none;
 }
 
 h1.projectHeading {
@@ -517,8 +576,85 @@ img.quizScreenshot {
 /* MEDIA QUERIES */
 
     /* MOBILE */
+    @media only screen and (max-width: 480px){
+        div.mainWrapper {
+            background-size: cover;
+        }
 
+        .scroll-downBio, .scroll-downProjects, .scroll-downSkills, .scroll-downTop, .scroll-down, 
+        .scroll-down:before, .scroll-downBio:before, .scroll-downProjects:before, .scroll-downSkills:before, 
+        .scroll-downTop:before {
+            display: none;
+        }
+    }
     /* TABLETS */
+
+    @media only screen and (max-width:960px) and (min-width:480px) {
+        h1.name {
+            font-size: 85px;
+            font-weight: bolder;
+        }
+        p.intro {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: white;
+            margin-left: 30px;
+            margin-right: 30px;
+            overflow: hidden; 
+            border-right: .15em solid grey; 
+            white-space: nowrap; 
+            margin: 0 auto; 
+            letter-spacing: .15em; 
+            animation: 
+                typing 4.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+    
+        p.bio {
+            line-height: 30px;
+            font-size: 12px;
+        }
+
+        /* DIVS */
+
+    div.mainWrapper {
+        background-repeat: repeat-x;
+        background-position: 0 0;
+        background-size: auto 100%;
+        animation: animatedBackground 1000s linear infinite;
+    }
+
+        div.bioHolder {
+            float: left;
+            width: 40%;
+            height: 600px;
+            margin-top: 65px;
+        }
+
+        div.skillsHolder {
+            float:right;
+            width: 40%;
+            height: 400px;
+        }
+
+        div.projectHolder {
+            float:left;
+            position: relative;
+            width: 70%;
+            height: 575px;
+            margin-top: 50px;
+        }
+
+        div.changeProjectButton {
+            display: block;
+            float: left;
+            height: 50px;
+            width: 50px;
+            position: absolute;
+            top: 40%;
+            left: 88%
+        }
+        
+    }
 
     /* DESKTOP */
     @media only screen and (min-width: 960px) {
@@ -544,6 +680,7 @@ img.quizScreenshot {
     
         p.bio {
             line-height: 30px;
+            font-size: 14px;
         }
 
         /* DIVS */
@@ -558,7 +695,7 @@ img.quizScreenshot {
         div.bioHolder {
             float: left;
             width: 40%;
-            height: 550px;
+            height: 600px;
             margin-top: 65px;
         }
 
@@ -572,8 +709,8 @@ img.quizScreenshot {
             float:left;
             position: relative;
             width: 70%;
-            height: 525px;
-            margin-top: 150px;
+            height: 575px;
+            margin-top: 50px;
         }
 
         div.changeProjectButton {
@@ -581,10 +718,9 @@ img.quizScreenshot {
             float: left;
             height: 50px;
             width: 50px;
-            border: 1px solid white;
             position: absolute;
-            top: 50%;
-            left: calc(100% - 52px);
+            top: 40%;
+            left: 88%
         }
         
     }

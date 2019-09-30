@@ -4,14 +4,15 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
-        <meta name="viewport" content="width=device-width"/>
+        <meta name="viewport" content="width=device-width", initial-scale=1.0/>
         <script src="https://kit.fontawesome.com/d0142f03e9.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="index.js"></script>
     </head>
     <body class="mainPage">
         <main role="main">
-            <div role="mainWrapper" class="mainWrapper">
+            
+            <div role="mainWrapper" class="mainWrapper" id="main">
                 <div role="mainInfo" class="main">
                     <section role="nameAndInfo">
                         <h1 class="name"><b></b>Hi, I'm Jake Pagel</b></h1>
@@ -23,13 +24,12 @@
                                 <button name="email" type="button" id="email" class="homepageButton"><i class="fas fa-envelope-open-text"></i></button>
                                 <button name="contactInfo" type="button" id="contactInfo" class="homepageButton"><i class="fas fa-id-card"></i></button>
                                 <button name="email" type="button" id="misc" class="homepageButton"><i class="fas fa-ellipsis-h"></i></button>
-                            <div role="buttonHolder3" class="buttonHolder3">
-                                    <a href="#bio" class="scroll-down" id="scroll" address="true"></a>
-                            </div>
                         </div>
-                    </section>
+                    </section> 
                 </div>
+                <a href="#bio" class="scroll-down" id="scroll" address="true"></a>
             </div>
+
             <div role="wrapper" class="bioWrapper" id="bio">    
                     <div role="bioDisplay" class="bioHolder">
                         <h1 class="bioHeading">
@@ -49,14 +49,13 @@
                             somewhat of an overthinker, so I have developed a habit of meditation and zoning out to music.  
                         </p>
                     </div>
-                    <!-- <div role="bioScrollButtonHolder" class="bioButtonHolder">
-                        <a href="#skills" class="scroll-downBio" id="scroll" address="true"></a>
-                    </div> -->
+                    <a href="#skills" class="scroll-downBio" id="scrollBio" address="true"></a>
                 </div>
             </div>
+
             <div role="wrapper" class="skillsWrapper" id="skills">
                 <div role="skillsDisplay" class="skillsHolder">
-                    <h1 class="skillsHeading">Skills</h1>
+                    <h1 class="skillsHeading"><u>Skills</u></h1>
                     <ul class="skillsList">
                         <li>CSS</li>
                         <li>HTML5</li>
@@ -64,8 +63,10 @@
                         <li>JQuery</li>
                     </ul>
                 </div>
+                <a href="#projects" class="scroll-downSkills" id="scrollSkills" address="true"></a>
             </div>
-            <div role="wrapper" class="projectWrapper">    
+
+            <div role="wrapper" class="projectWrapper" id="projects">    
                     <div role="projectDisplay" class="projectHolder">
                         <h1 class="projectHeading">
                             <u>PROJECTS</u>
@@ -92,9 +93,28 @@
                             updates with each question, the ability to restart the quiz after the final question, and an update of current score after
                             each question. These elements were grabbed and manipulated using JQuery and Javascript.
                         </p>
-                        <div role="changeProject" class="changeProjectButton"></div>
+                        <div role="changeProject" class="changeProjectButton">
+                                <button name="changeProject" type="button" id="changeProject" class="homepageButton"><i class="fas fa-arrow-right"></i></button>
+                        </div>
                     </div>
+                    <a href="#contactInfoWrapper" class="scroll-downProjects" id="scrollProjects" address="true"></a>
             </div>
+
+            <div role="contactInfo" class="contactInfoWrapper" id="contactInfoWrapper">
+                <div role="contactInfoHolder" class="contactInfoHolder">
+                    <h1 class="contactHeader">
+                        Contact me!
+                    </h1>
+                    <br>
+                    <p class="contact">email: <a href="mailto:jakepagel1@yahoo.com">jakepagel1@yahoo.com</a></p>
+                    <br>
+                    <p class="contact">phone: 262-527-2421</p>
+                    <br>
+                    <p class="contact">github: <a href="https://github.com/jakep5">jakep5</a></p>
+                </div>
+                <a href="#main" class="scroll-downTop" id="scrollTop" address="true"></a>
+            </div>
+
         </main>
     </body>
 </html>
